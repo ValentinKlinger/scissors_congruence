@@ -184,7 +184,10 @@ def is_point_inside_triangle(
     )
 
     # Check if the test_point is inside the triangle by comparing areas.
-    return area_triangle == area1 + area2 + area3
+    # print(
+    #    f"aire du triangle : {area_triangle}\nsomme des petits triangles : {area1+area2+area3}\necart relatif : {abs(area_triangle-area1-area2-area3)}"
+    # )
+    return round(area_triangle, 4) == round(area1 + area2 + area3, 4)
 
 
 def triangulate_polygon(
